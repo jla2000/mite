@@ -52,7 +52,7 @@ float4 PixelMain(float4 sv_pos : SV_POSITION) : SV_TARGET {
     uint grid_pixel_width = col_count * cell_size.x;
 
     // Scrollbar area (beyond the cell grid)
-    if (sv_pos.x >= grid_pixel_width) {
+    if (sv_pos.x >= (float)grid_pixel_width) {
         float3 color;
         float alpha;
 
